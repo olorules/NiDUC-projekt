@@ -1,0 +1,18 @@
+Supermicro Intel I350-T2 Dual Port, 2xRJ45, 1000 Mbit/s
+374.66
+Supermicro Intel I350-T4 Quad Port, 4xRJ45, 1000 Mbit/s
+767.95
+Supermicro Intel X540 Dual Port, 2xRJ45, 10GbE
+1636.98
+Intel X540-T2 Dual port, 2xRJ45, 1 x 10GBASE-SR
+1362.37
+Supermicro Intel 82599EN 10GbE Single SFP+ port (bez modu��w)
+713.67
+Supermicro Intel 82599ES 10GbE Dual SFP+ port (bez modu��w)
+1365.57
+Supermicro Broadcom BCM57840S 10GbE Quad SFP+
+2122.93
+Supermicro Intel XL710 40GbE Dual QSFP+
+2725.30
+Supermicro Intel FM10420 100GbE Dual QSFP28
+4176.94
