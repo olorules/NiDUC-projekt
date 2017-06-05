@@ -1,5 +1,5 @@
-def read_ram():
-    file = open('RAM.txt')
+def read_cpu():
+    file = open('Procesory.txt')
 
     lines = []
     dictionary = dict()
@@ -18,3 +18,13 @@ def read_ram():
         i += 2
 
     return dictionary
+
+def cpu_menu():
+    list = []
+    i = 0
+    for key, value in read_cpu().items():
+        print(f"{i}. {key}\nCena: {value} zl")
+        list.append(key)
+        i += 1
+    x = input("Wybierz CPU: ")
+    return list[int(x)]

@@ -19,3 +19,13 @@ def read_drives():
         i += 3
 
     return dictionary
+
+def drives_menu():
+    list = []
+    i = 0
+    for key, value in read_drives().items():
+        print(f"{i}. {key}\nCena: {value} zl")
+        list.append(key)
+        i += 1
+    x = input("Wybierz Dyski: ")
+    return list[int(x)]

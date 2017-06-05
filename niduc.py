@@ -1,18 +1,16 @@
-from read_ram import read_ram
-from read_cpu import read_cpu
-from read_drives import read_drives
-from read_bbu import read_bbu
-from read_network_card import read_network_card
-from read_controler_cable import read_controler_cable
+from ram import ram_menu
+from cpu import cpu_menu
+from drives import drives_menu
+from bbu import bbu_menu
+from network_card import network_card_menu
+from controler_cable import controler_cable_menu
 
 import os
 
+configuration = {"CPU": None, "RAM": None, "Drives": None, "BBU": None, "Network Card": None, "Controler cable": None}
+
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
-
-def cpu_menu():
-    for key, value in read_cpu().items():
-        print(f"{key}\nCena: {value} zl")
 
 def menu():
     loop = True
@@ -25,30 +23,44 @@ def menu():
         print("4.BBU")
         print("5.Karty sieciowe")
         print("6.Kontroler sprzętowy")
+        print("7.Wypisanie aktualnej konfiguracji")
 
         usr_input = input("Podaj opcje: ")
 
         if usr_input == "1":
             cls()
-            cpu_menu()
+            configuration["CPU"] = cpu_menu()
             print()
         elif usr_input == "2":
-            print("RAM")
+            cls()
+            configuration["RAM"] = ram_menu()
+            print()
         elif usr_input == "3":
-            print("DRIVE")
+            cls()
+            configuration["Drives"] = drives_menu()
+            print()
         elif usr_input == "4":
-            print("BBU")
+            cls()
+            configuration["BBU"] = bbu_menu()
+            print()
         elif usr_input == "5":
-            print("NCARD")
+            cls()
+            configuration["Network Card"] = network_card_menu()
+            print()
+        elif usr_input == "6":
+            cls()
+            configuration["Controler cable"] = controler_cable_menu()
+            print()
+        elif usr_input == "7":
+            cls()
+            for k, v in configuration.items():
+                print(f"{k}: {v}")
         elif usr_input == "0":
             loop = False
         else:
             print("Wybrano złą opcję.")
 
 
-
-
-configuration = {"CPU": None, "RAM": None, "Drives": None, "BBU": None, "Network Card": None, "Controler cable": None}
 
 cls()
 print("\nElo, wybierz jaką chcesz konfigurację sprzętu.")

@@ -18,3 +18,13 @@ def read_bbu():
         i += 2
 
     return dictionary
+
+def bbu_menu():
+    list = []
+    i = 0
+    for key, value in read_bbu().items():
+        print(f"{i}. {key}\nCena: {value} zl")
+        list.append(key)
+        i += 1
+    x = input("Wybierz BBU: ")
+    return list[int(x)]

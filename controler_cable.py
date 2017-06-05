@@ -18,3 +18,13 @@ def read_controler_cable():
         i += 2
 
     return dictionary
+
+def controler_cable_menu():
+    list = []
+    i = 0
+    for key, value in read_controler_cable().items():
+        print(f"{i}. {key}\nCena: {value} zl")
+        list.append(key)
+        i += 1
+    x = input("Wybierz kontroler i kabel: ")
+    return list[int(x)]

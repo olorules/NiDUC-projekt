@@ -18,3 +18,13 @@ def read_network_card():
         i += 2
 
     return dictionary
+
+def network_card_menu():
+    list = []
+    i = 0
+    for key, value in read_network_card().items():
+        print(f"{i}. {key}\nCena: {value} zl")
+        list.append(key)
+        i += 1
+    x = input("Wybierz kartę sieciową: ")
+    return list[int(x)]
