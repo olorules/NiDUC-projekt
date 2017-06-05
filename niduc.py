@@ -12,7 +12,7 @@ def cls():
 
 def cpu_menu():
     for key, value in read_cpu().items():
-        print(f"{key}\nCena: {value}")
+        print(f"{key}\nCena: {value} zl")
 
 def menu():
     loop = True
@@ -50,8 +50,8 @@ def menu():
 
 configuration = {"CPU": None, "RAM": None, "Drives": None, "BBU": None, "Network Card": None, "Controler cable": None}
 
+cls()
 print("\nElo, wybierz jaką chcesz konfigurację sprzętu.")
-
 menu()
 """
 loop = True
