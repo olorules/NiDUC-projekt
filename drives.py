@@ -24,8 +24,8 @@ def drives_menu():
     list = []
     i = 0
     for key, value in read_drives().items():
-        print(f"{i}. {key}\nCena: {value} zl")
-        list.append(key)
+        print(f"{i}. {key}\nCena: {value[0]} zl\nMBTF: {value[1]}\n")
+        list.append((key, value))
         i += 1
     x = input("Wybierz Dyski: ")
     return list[int(x)]

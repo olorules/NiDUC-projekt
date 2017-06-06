@@ -24,7 +24,7 @@ def ram_menu():
     i = 0
     for key, value in read_ram().items():
         print(f"{i}. {key}\nCena: {value} zl")
-        list.append(key)
+        list.append((key, value))
         i += 1
     x = input("Wybierz RAM: ")
     return list[int(x)]

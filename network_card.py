@@ -14,7 +14,7 @@ def read_network_card():
     i = 0
 
     while i < lines_count:
-        dictionary[lines[i]] = [lines[i+1]]
+        dictionary[lines[i]] = lines[i+1]
         i += 2
 
     return dictionary
@@ -24,7 +24,7 @@ def network_card_menu():
     i = 0
     for key, value in read_network_card().items():
         print(f"{i}. {key}\nCena: {value} zl")
-        list.append(key)
+        list.append((key, value))
         i += 1
     x = input("Wybierz kartę sieciową: ")
     return list[int(x)]
